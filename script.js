@@ -13,12 +13,6 @@ function playSound(key) {
   // Play the drum sound
   const audio = new Audio(sounds[key].sound);
   audio.play().catch(err => console.log("Error playing sound:", err)); // Error handling
-  
-  // Announce the name of the drum using speech synthesis
-  const speech = new SpeechSynthesisUtterance(sounds[key].name);
-  speech.volume = 0.7; // Set volume to 70% to not overpower the drum sound
-  speech.rate = 1.2; // Slightly faster speech
-  window.speechSynthesis.speak(speech);
 }
 
 // Function to set background image for the buttons
